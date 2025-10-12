@@ -1,0 +1,52 @@
+state_abbrev,state_name,census_region,census_division,state_fips
+CT,Connecticut,Northeast,New England,9
+ME,Maine,Northeast,New England,23
+MA,Massachusetts,Northeast,New England,25
+NH,New Hampshire,Northeast,New England,33
+RI,Rhode Island,Northeast,New England,44
+VT,Vermont,Northeast,New England,50
+NJ,New Jersey,Northeast,Middle Atlantic,34
+NY,New York,Northeast,Middle Atlantic,36
+PA,Pennsylvania,Northeast,Middle Atlantic,42
+IL,Illinois,Midwest,East North Central,17
+IN,Indiana,Midwest,East North Central,18
+MI,Michigan,Midwest,East North Central,26
+OH,Ohio,Midwest,East North Central,39
+WI,Wisconsin,Midwest,East North Central,55
+IA,Iowa,Midwest,West North Central,19
+KS,Kansas,Midwest,West North Central,20
+MN,Minnesota,Midwest,West North Central,27
+MO,Missouri,Midwest,West North Central,29
+NE,Nebraska,Midwest,West North Central,31
+ND,North Dakota,Midwest,West North Central,38
+SD,South Dakota,Midwest,West North Central,46
+DE,Delaware,South,South Atlantic,10
+DC,District of Columbia,South,South Atlantic,11
+FL,Florida,South,South Atlantic,12
+GA,Georgia,South,South Atlantic,13
+MD,Maryland,South,South Atlantic,24
+NC,North Carolina,South,South Atlantic,37
+SC,South Carolina,South,South Atlantic,45
+VA,Virginia,South,South Atlantic,51
+WV,West Virginia,South,South Atlantic,54
+AL,Alabama,South,East South Central,1
+KY,Kentucky,South,East South Central,21
+MS,Mississippi,South,East South Central,28
+TN,Tennessee,South,East South Central,47
+AR,Arkansas,South,West South Central,5
+LA,Louisiana,South,West South Central,22
+OK,Oklahoma,South,West South Central,40
+TX,Texas,South,West South Central,48
+AZ,Arizona,West,Mountain,4
+CO,Colorado,West,Mountain,8
+ID,Idaho,West,Mountain,16
+MT,Montana,West,Mountain,30
+NV,Nevada,West,Mountain,32
+NM,New Mexico,West,Mountain,35
+UT,Utah,West,Mountain,49
+WY,Wyoming,West,Mountain,56
+AK,Alaska,West,Pacific,2
+CA,California,West,Pacific,6
+HI,Hawaii,West,Pacific,15
+OR,Oregon,West,Pacific,41
+WA,Washington,West,Pacific,53

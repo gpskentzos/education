@@ -40,6 +40,14 @@ This is a broad question that we will make more precise as we consider how we wa
 - **Description:** This data set consists of basic identifying information about schools
 - **License:** NA
 
+- **Source:** https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf?utm_source=chatgpt.com
+- https://www.census.gov/library/reference/code-lists/ansi.html#state
+- **Description:** Maps each U.S. state and D.C. to its Census region and Census division, with state postal abbreviations and FIPS codes. Used to group schools and summarize ACT results by geographic region. This lookup table is derived from the official Census region/division definitions and ANSI/FIPS state codes. No data values were modified beyond formatting into a simple CSV structure for analysis.
+- **License:** NA
+
+- **Source:** https://nces.ed.gov/programs/digest/d17/tables/dt17_226.60.asp
+- **Description:** Provides average ACT composite scores and percent of graduates tested by state for the class of 2016. Used to add context to regional analysis—recognizing that ACT participation rates differ widely by state (which influences average scores). Values for 2016 (composite and participation) were extracted directly from the NCES table and combined with the Census region/division data for consistency in analysis.
+- **License:** NA
 ---
 
 ## Analysis
@@ -50,6 +58,14 @@ This project takes data sets containing information on schools, the socioecomoni
 - Education_Analysis.ipynb contains all the code necessary to run and analyze the data files. 
 - EdGap_data.xlsx, ccd_sch_029_1617_w_1a_11212017.csv, and XXX located in the data directory are the only files used in the analysis. 
 - Some data set will be created as a result of the analysis. 
+
+The 2016 ACT and socioeconomic data were selected intentionally to maintain alignment across all sources used in this project. The EdGap_data.xlsx dataset represents conditions and outcomes from 2016, and the accompanying NCES Common Core of Data file covers the 2016–2017 academic year.
+Although more recent ACT data (through 2023) are available from NCES, the 2016 data were retained for three reasons:
+- Temporal consistency — All primary data sources describe the same time period, allowing for coherent analysis without cross-year bias.
+- Comparability — The 2016 ACT data have been widely used in previous research and coursework, making it easier to compare new findings with established benchmarks.
+- Reproducibility — Because the 2016 datasets are well-documented and publicly archived, results can be reproduced and verified by others.
+
+Future iterations of this project could extend the analysis by incorporating more recent ACT data (e.g., 2018–2023) to examine trends over time, but this version focuses on methodological integrity and alignment within the 2016 data scope.
 
 ---
 
