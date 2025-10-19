@@ -6,6 +6,9 @@ pandas
 matplotlib
 seaborn
 
+# Data handling
+pyarrow
+openpyxl
 
 # Machine Learning
 scikit-learn

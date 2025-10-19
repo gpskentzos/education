@@ -20,16 +20,20 @@ This is a broad question that we will make more precise as we consider how we wa
 ## Project Structure
 
 ```
-├── data/                 # Raw and processed data
+├── data/                 # Raw data
+├── data/processed        # processed data (clean data set)
 ├── code/                 # Jupyter notebooks and Python scripts
 ├── reports/              # Generated reports and visualizations
 ├── requirements.txt      # Python Dependencies
-└── README.md             # Project documentation
+├── README.md             # Project introduction
+└── ETHICS.md             # Data science ethics checklist
 ```
 
 ---
 
 ## Data
+
+- Cleaned data file: `clean_education_dataset.csv`
 
 - **Source:** https://www.edgap.org/#4/37.71/-95.99
 - **Description:** data set from 2016 includes information about average ACT or SAT scores for schools and several socioeconomic characteristics of the school district
@@ -50,28 +54,32 @@ This is a broad question that we will make more precise as we consider how we wa
 - **License:** NA
 ---
 
-## Analysis
+## Data Analysis
 
+### Analysis Overview
+This project performs a comprehensive analysis of the relationship between socioeconomic factors and ACT performance using linear regression modeling. The analysis includes:
 
-This project takes data sets containing information on schools, the socioecomonic indicators for those schools, and ACT/SAT scores. The analysis consisted of taking the files and converting into two dataframes. We analyzed the data in those dataframes to ensure that the data was consistant and could give us the answers we were looking to get from the data.
+1. **Data Preparation**: Loading, cleaning, and merging four school based datasets 
+2. **Feature Engineering**: Creating derived variables including log transformations, interaction terms, and z-scores
+3. **Exploratory Analysis**: Correlation analysis, distribution plots, and regional comparisons
+4. **Statistical Modeling**: 
+   - School-level regression with 6 predictors
+   - State-level regression with cross-validation
+   - ANOVA testing for regional differences
 
-- Education_Analysis.ipynb contains all the code necessary to run and analyze the data files. 
-- EdGap_data.xlsx, ccd_sch_029_1617_w_1a_11212017.csv, and XXX located in the data directory are the only files used in the analysis. 
-- Some data set will be created as a result of the analysis. 
+### Key Findings
+- Strong negative association between poverty (FRL%) and ACT scores
+- Income and parental education show positive associations with performance
+- State ACT participation rate confirms selection bias hypothesis
+- Significant regional differences detected
 
-The 2016 ACT and socioeconomic data were selected intentionally to maintain alignment across all sources used in this project. The EdGap_data.xlsx dataset represents conditions and outcomes from 2016, and the accompanying NCES Common Core of Data file covers the 2016–2017 academic year.
-Although more recent ACT data (through 2023) are available from NCES, the 2016 data were retained for three reasons:
-- Temporal consistency — All primary data sources describe the same time period, allowing for coherent analysis without cross-year bias.
-- Comparability — The 2016 ACT data have been widely used in previous research and coursework, making it easier to compare new findings with established benchmarks.
-- Reproducibility — Because the 2016 datasets are well-documented and publicly archived, results can be reproduced and verified by others.
+### Files
+- **Analysis Notebook**: `code/Education_Analysis_FINAL.ipynb`
+- **Clean Dataset**: `data/processed/clean_education_dataset.csv`
+- **Outputs**: All figures and tables saved to `reports/` directory
 
-Future iterations of this project could extend the analysis by incorporating more recent ACT data (e.g., 2018–2023) to examine trends over time, but this version focuses on methodological integrity and alignment within the 2016 data scope.
-
----
-
-## Results
-
-TBD
+### Reproducibility
+Run all cells in order (Restart & Run All) to reproduce all results. The notebook uses relative paths and creates output directories automatically.
 
 ---
 
@@ -89,11 +97,24 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-- Data sets: 
-  - https://www.edgap.org/#4/37.71/-95.99
-  - https://nces.ed.gov/ccd/pubschuniv.asp
+### Data sets:
+  https://www.edgap.org/#5/37.875/-96.987
+  https://nces.ed.gov/ccd/pubschuniv.asp
+  https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf
+  https://nces.ed.gov/programs/digest/d17/tables/dt17_226.60.asp
 
-- Tutorials or papers referenced
+### References:
+- James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). *An Introduction to Statistical Learning*. Springer. Retrieved from https://www.statlearning.com/ (Chapters 3 & 7: Multiple regression and cross-validation)
+### Implementation Resources
+- Pandas Documentation: Data merging and joining strategies. https://pandas.pydata.org/docs/user_guide/merging.html
+- Seaborn Statistical Visualization. https://seaborn.pydata.org/tutorial/regression.html (Regression plots and statistical graphics)
+- Scikit-learn: Linear Models. https://scikit-learn.org/stable/modules/linear_model.html (Regression implementation)
+### Data Sources
+- EdGap.org: School-level socioeconomic and performance data. https://www.edgap.org/
+- National Center for Education Statistics (NCES): Common Core of Data and ACT participation statistics. https://nces.ed.gov/
+- U.S. Census Bureau: Geographic divisions and state FIPS codes. https://www.census.gov/
+### Collaboration
+- Stack Overflow community for troubleshooting pandas merge strategies
+- Seattle University DATA 5100 course materials and instruction
 
-- Inspiration or collaborators
-	- Seattle University DATA 5100 Course
+This analysis builds on established research in educational inequality and applies modern statistical methods to understand the relationship between socioeconomic factors and academic achievement. Statistical techniques including ANOVA, VIF analysis, and cross-validation were implemented following best practices from the data science community.

@@ -1,0 +1,5 @@
+metric,value
+R2,0.614
+MAE,1.183
+n_train,6350.0
+n_test,1588.0
